@@ -20,14 +20,6 @@ spec:
           ports:
           - name: mysql-port
             containerPort: 3306
-          env:
-          - name: MYSQL_DATABASE
-            value: "prize_db"
-          - name: MYSQL_ROOT_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: mysecret
-                key: rootpw
 
 ---
 
@@ -53,17 +45,6 @@ spec:
           ports:
           - name: service1-port
             containerPort: 5000
-          env:
-          - name: DATABASE_URI
-            valueFrom:
-              secretKeyRef:
-                name: mysecret
-                key: databaseuri
-          - name: SECRET_KEY
-            valueFrom:
-              secretKeyRef:
-                name: mysecret
-                key: secretkey
 
 ---
 
