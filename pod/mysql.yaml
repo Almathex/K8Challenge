@@ -10,8 +10,3 @@ spec:
     image: mysql:5.7
     ports:
     - containerPort: 80
-    env:
-    - name: MYSQL_DATABASE
-      value: "db_test"
-    - name: MYSQL_ROOT_PASSWORD
-      value: "root-pass"
